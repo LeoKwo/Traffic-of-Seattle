@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
-  <title>Traffic of Seattle - Leo Kwo GEOG 458 Final Project</title>
+  <title>References</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <style>
@@ -125,7 +125,7 @@
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="override_nav">
-    <div class="navbar-brand">Data Sources</div>
+    <div class="navbar-brand">References</div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -140,8 +140,8 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="more.html">Learn more</a>
-            <a class="dropdown-item" href="#">Data sources</a>
+            <a class="dropdown-item" href="more.html">Data Source Information</a>
+            <a class="dropdown-item" href="#">References</a>
           </div>
         </li>
       </ul>
@@ -152,31 +152,42 @@
     <h1>
       References
     </h1>
+
+    <b>
+      Collisions Shapefile
+    </b>
     <p>
-      This project maps the traffic of Seattle. There are multiple elements to traffic. This project shows the <b>traffic flow</b>, <b>crash cushions</b>, <b>traffic beacons</b>, and <b>collisions</b> of the City of Seattle. With this project, people who are interested in the traffic/transportation situation of Seattle can easily view and investigate the overall trend of traffic in Seattle. This project also provides quick access links to data sources that it uses, allowing researchers to download and analyze if they so choose.
+      Government of Seattle. (2018, April 4). Collisions. Retrieved March 01, 2021, from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/collisions">https://data-seattlecitygis.opendata.arcgis.com/datasets/collisions</a>
     </p>
 
-    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/collisions"></a>
+    <b>
+      Traffic Beacons Shapefile
+    </b>
     <p>
-      This layer maps the number of collisions per census tract in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. It is calculated by counting the number of collision features inside each census tract polygon. The data is then classified into <b>8</b> groups using Natural Breaks (Jenks). This data is a good reference of the collision incidients in Seattle. This dataset contains collisions from 2004 to 2018. It received its last update on 4/4/2018.
-    </p>
-
-
-    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/traffic-beacons"></a>
-    <p>
-      This layer maps the number of traffic beacons per census tract in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i><b>Traffic Beacons</b> are warning devices to draw a vehicle operator’s attention to an associated message that is important to the safe operation of the vehicle on a specific stretch of roadway.</i> It is calculated by counting the number of traffic beacon features inside each census tract polygon. The data is then classified into <b>8</b> groups using Natural Breaks (Jenks). This data is a good reference of the distribution of traffic beacons in Seattle. This data was last updated on 3/13/2021.
-    </p>
-
-
-    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/2018-traffic-flow-counts">View its data source</a>
-    <p>
-      This layer maps the 2018 average weekday traffic flow of major roads/highways in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i><b>Average Weekday Traffic</b>: derived by averaging 24-hour daily traffic volumes for both directions across Monday through Friday, excluding holidays and weekends, then adjusting for seasonal variations by applying an annual adjustment factor. This number is given in thousands of vehicles.</i> The data is classified into <b>5</b> groups using Natural Breaks (Jenks). This data is a good reference of the distribution of traffic flows in Seattle. This data was last updated on 8/30/2019.
+      Government of Seattle. (2021, March 13). <i>Traffic Beacons.</i> Retrieved March 01, 2021, from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/traffic-beacons">https://data-seattlecitygis.opendata.arcgis.com/datasets/traffic-beacons</a>
     </p>
 
 
-    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/crash-cushions">View its data source</a>
+    <b>
+      2018 Traffic Flow Counts Shapefile
+    </b>
     <p>
-      This layer maps the distribution of crash cushions in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i>A <b>crash cushion</b> is a disposable device used to increase safety for motor vehicle operators and passengers who collide with safety barriers at gore points. Crash cushions improve safety and also help protect the transportation infrastructure.</i> The data was not classified. It is a good reference of the distribution of crash cushions in Seattle. This data was last updated on 11/23/2020.
+      Government of Seattle. (2019, August 30). <i>2018 Traffic Flow Counts.</i> Retrieved March 01, 2021, from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/2018-traffic-flow-counts">https://data-seattlecitygis.opendata.arcgis.com/datasets/2018-traffic-flow-counts</a>
+    </p>
+
+
+    <b>
+      Crash Cushions Shapefile
+    </b>
+    <p>
+      Government of Seattle. (2020, November 23). <i>Crash Cushions.</i> Retrieved March 01, 2021, from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/crash-cushions">https://data-seattlecitygis.opendata.arcgis.com/datasets/crash-cushions</a>
+    </p>
+
+    <b>
+      Census Tract Shapefile
+    </b>
+    <p>
+      Government of Seattle. (2019, April 15). <i>Census tracts 2010.</i> Retrieved March 01, 2021, from <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/census-tracts-2010">https://data-seattlecitygis.opendata.arcgis.com/datasets/census-tracts-2010</a>
     </p>
 
   </div>
