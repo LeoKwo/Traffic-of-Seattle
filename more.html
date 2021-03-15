@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <title>Project Information</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <style>
+    html,
+    body,
+    main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to bottom, rgba(64,64,64,0.8), #202020), url('img/bg.jpg');
+      background-attachment: fixed;
+      display: flex;
+      flex-flow: column;
+    }
+
+    #info {
+      margin: 2em;
+    }
+    foot {
+      padding:2em;
+      color: #ffffff;
+      background: #161616;
+    }
+
+
+    @media (min-width: 720px) {
+      #info {
+        margin: 5em;
+      }
+      foot {
+        padding:5em;
+        color: #ffffff;
+        background: #161616;
+      }
+    }
+
+    @media (min-width: 1080px) {
+      #info {
+        margin-top: 5em;
+        margin-left: 10em;
+        margin-right: 10em;
+        margin-bottom: 5em;
+      }
+      foot {
+        padding-left: 10em;
+        padding-right: 10em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        color: #ffffff;
+        background: #161616;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      #info {
+        margin-top: 10em;
+        margin-left: 20em;
+        margin-right: 20em;
+        margin-bottom: 10em;
+      }
+      foot {
+        padding-left: 20em;
+        padding-right: 20em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        color: #ffffff;
+        background: #161616;
+      }
+    }
+
+    @media (min-width: 1800px) {
+      #info {
+        margin-top: 10em;
+        margin-left: 30em;
+        margin-right: 30em;
+        margin-bottom: 10em;
+      }
+      foot {
+        padding-left: 30em;
+        padding-right: 30em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        color: #ffffff;
+        background: #161616;
+      }
+    }
+
+    #info p {
+      color: #bababa;
+      margin-bottom: 2em;
+    }
+
+    foot p {
+      margin-bottom: 0em;
+      color: #bababa;
+    }
+
+    #info b, h1, h2, h4, foot b{
+      color: #ffffff;
+    }
+
+    h4 {
+      margin-top: 1em;
+    }
+  </style>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="override_nav">
+    <div class="navbar-brand">Project Information</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Traffic Map<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">Learn more</a>
+            <a class="dropdown-item" href="source.html">Data sources</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="info">
+    <h1>
+      General Information About the Project
+    </h1>
+    <p>
+      This project maps the traffic of Seattle. There are multiple elements to traffic. This project shows the <b>traffic flow</b>, <b>crash cushions</b>, <b>traffic beacons</b>, and <b>collisions</b> of the City of Seattle. With this project, people who are interested in the traffic/transportation situation of Seattle can easily view and investigate the overall trend of traffic in Seattle. This project also provides quick access links to data sources that it uses, allowing researchers to download and analyze if they so choose.
+    </p>
+    <h2>
+      Learn more about the data
+    </h2>
+    <h4><i>
+      Collisions Per Tract
+    </h4></i>
+    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/collisions">View its data source</a>
+    <p>
+      This layer maps the number of collisions per census tract in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. It is calculated by counting the number of collision features inside each census tract polygon. The data is then classified into <b>8</b> groups using Natural Breaks (Jenks). This data is a good reference of the collision incidients in Seattle. This dataset contains collisions from 2004 to 2018. It received its last update on 4/4/2018.
+    </p>
+
+    <h4><i>
+      Traffic Beacons Per Tract
+    </h4></i>
+    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/traffic-beacons">View its data source</a>
+    <p>
+      This layer maps the number of traffic beacons per census tract in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i><b>Traffic Beacons</b> are warning devices to draw a vehicle operator’s attention to an associated message that is important to the safe operation of the vehicle on a specific stretch of roadway.</i> It is calculated by counting the number of traffic beacon features inside each census tract polygon. The data is then classified into <b>8</b> groups using Natural Breaks (Jenks). This data is a good reference of the distribution of traffic beacons in Seattle. This data was last updated on 3/13/2021.
+    </p>
+
+    <h4><i>
+      Traffic Flow 2018
+    </h4></i>
+    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/2018-traffic-flow-counts">View its data source</a>
+    <p>
+      This layer maps the 2018 average weekday traffic flow of major roads/highways in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i><b>Average Weekday Traffic</b>: derived by averaging 24-hour daily traffic volumes for both directions across Monday through Friday, excluding holidays and weekends, then adjusting for seasonal variations by applying an annual adjustment factor. This number is given in thousands of vehicles.</i> The data is classified into <b>5</b> groups using Natural Breaks (Jenks). This data is a good reference of the distribution of traffic flows in Seattle. This data was last updated on 8/30/2019.
+    </p>
+
+    <h4><i>
+      Crash Cushions
+    </h4></i>
+    <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/crash-cushions">View its data source</a>
+    <p>
+      This layer maps the distribution of crash cushions in Seattle. The data is collected through the <a href="https://data-seattlecitygis.opendata.arcgis.com/">Seattle GeoData portal</a>. <i>A <b>crash cushion</b> is a disposable device used to increase safety for motor vehicle operators and passengers who collide with safety barriers at gore points. Crash cushions improve safety and also help protect the transportation infrastructure.</i> The data was not classified. It is a good reference of the distribution of crash cushions in Seattle. This data was last updated on 11/23/2020.
+    </p>
+
+    <a href="source.html">Click here to view more detailed data sources and reference</a>
+
+  </div>
+</body>
+<foot>
+  <b>
+    Leo Kwo
+  </b>
+  <p>
+    GEOG 458 Final Project
+  </p>
+  <p>
+    University of Washington
+  </p>
+  <p>Visit this project's <a href="https://github.com/LeoKwo/geog458_finalproject">GitHub page</a> for more.</p>
+</foot>
+
+</html>
