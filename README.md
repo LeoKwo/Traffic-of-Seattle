@@ -1,7 +1,7 @@
 # Traffic of Seattle
 ## Leo Kwo
 
-Follow [this link](https://leokwo.github.io/geog458_finalproject/) to visit the hosted project website.
+Follow [this link](https://leokwo.github.io/Traffic-of-Seattle/) to visit the hosted project website.
 ![A Snapshot of the hosted website](img/snap.jpg)
 
 ### Project description
