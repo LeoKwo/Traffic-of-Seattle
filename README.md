@@ -7,7 +7,7 @@ Follow [this link](https://leokwo.github.io/geog458_finalproject/) to visit the 
 ### Project description
 This project maps the traffic of Seattle. There are multiple elements to traffic. This project shows the **traffic flow**, **crash cushions**, **traffic beacons**, and **collisions** of the City of Seattle. With this project, people who are interested in the traffic/transportation situation of Seattle can easily view and investigate the overall trend of traffic in Seattle. This project also provides quick access links to data sources that it uses, allowing researchers to download and analyze if they so choose.
 
-### Project goal (such as, what is the message you want to deliver through your project?)
+### Project goal
 There are several key takeaways I wish my audience to have with this project:
 1. There is a cluster of collisions towards the **South of Downtown Seattle**. The exact cause of this trend is not clear. But I wish people looking at this project can notice this trend and investigate more if possible.
 2. The **Southern part of Downtown Seattle** also sees a cluster of Crash Cushions. It is highly possible that these cushions are placed in the area purposefully to reduce collision damage. However, we need to know that preventing collision incidents from taking place is many times better than reducing collision damage. If we want to resolve the collision issues in the area, we need more research and study to understand the exact cause of the high collision rate in the area.
@@ -69,8 +69,4 @@ There are several key takeaways I wish my audience to have with this project:
 - QGIS [https://www.qgis.org/en/site/](https://www.qgis.org/en/site/)
 - QMetaTiles [https://plugins.qgis.org/plugins/QMetaTiles/](https://plugins.qgis.org/plugins/QMetaTiles/)
 
-### Other things that are necessary to inform the audience.
-None.
 
-### Acknowledgment
-None.
